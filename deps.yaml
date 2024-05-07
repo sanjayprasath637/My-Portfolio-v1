@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployement
+metadata:
+  name: demo-project
+  labels:
+    app: demo-project
+spec:
+  selector:
+    matchLabels:
+      app: demo-project
+  template:
+    metadata:
+      labels:
+        app: demo-project
+    spec:
+      containers:
+        - name: demo-project
+          image: 905418441353.dkr.ecr.ap-south-1.amazonaws.com/mproject-2:tagVersion
